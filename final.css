@@ -1,0 +1,256 @@
+/*
+ * Name: Vimal Vinod
+ * Professor: Kurt Johnson
+ * Assignment: Final Project
+ */
+
+/*---------------------*/
+
+/* Introduction Page Styling */
+
+/*---------------------*/
+
+/* Add body attributes  */
+body {
+	background: #f0ead6;
+	background-size: cover;
+	font-family: Impact;
+	font-weight: lighter;
+}
+
+/* Unique styling for home page */ 
+.homePage {
+	background-image: url('https://i.imgur.com/uyXN5TD.gif');
+	background-size: cover;
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+        height:100%;
+        width:100%;
+}
+
+/* Underline and bold text */
+.underlineBold {
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+/* Make the text larger  */
+.largeText {
+	font-size: 12px;
+}
+
+/* Add link attributes */
+a:link {
+	color: black;
+}
+
+/* Add parapgraph attributes  */
+p {
+	font-size: 10px;
+}
+
+/* Add attributes to the navbar  */
+.navCust {
+	padding: 0px 0px 0px 10px;
+	position: relative;
+	width: 100%;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	background: rgba(169,169,169,0.4);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);	
+}
+
+/* Add attributes to navbar buttons  */
+.active>a, a:hover {
+        color: black;
+	opacity: 1;
+	transition: 1s;
+        box-shadow: inset 0 2px 4px 0 rgba(0,0,0,.3);
+	border-radius: 8px;
+}
+
+/* Add attributes to navbar title  */
+.custTitle {
+	display: inline-block;
+	margin: -5px 15px 0px 0px;
+	font-size: 18px;
+}
+
+/* Add attributes to buttons  */
+.bttn {
+	margin: 5px 0px 10px 5px;
+	padding: 5px 0px 5px 0px;
+	font-size: 15px; 
+}
+
+/* Add attributes to card in intro page  */
+.introCard {
+    	display: block;
+	margin-left: 200px;
+	margin-right: 200px;    	
+	margin-top: 30px;
+	margin-bottom: 70px;
+	width: 350px;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+	background-color: #ADD9D9;
+}
+
+/* Footer link color */
+#footerInd a{
+	color: white;
+}
+
+/*---------------------*/
+
+/* Weather Page Styling */
+
+/*---------------------*/
+
+/* Add attributes to card in weather page  */
+.locationCard {		
+	margin-top: 50px;
+	margin-bottom: 30px;
+	font-size: 14px;
+	text-align: center;
+	background-color: #ADD9D9;
+	border: none;
+	width: 60%;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+}
+
+/* Add attributes to other card in weather page  */
+#locationBox {
+	display: block;
+        margin-left: auto;
+        margin-right: auto;
+	resize: none;
+	text-align: center;
+	border: none;
+}
+
+/* Add attributes to button in weather page  */
+
+.btn:hover, .btn:active {
+	box-shadow: inset 0 2px 4px 0 rgba(0,0,0,.3);
+	transition: 1s;
+}
+
+/* Center page  */
+.center {
+	display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+	text-align: center;
+	border-radius: 8px;
+}
+
+/* For the weather div  */
+.weather {
+	margin-bottom: 50px;
+	background: #ADD9D9;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+}
+
+/* For the weather table attributes  */
+.weatherCard, th, td {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: auto; 
+        margin-right: auto;
+	text-align: center;
+	background-color: #ADD9D9;
+	border: 1px solid black;
+	vertical-align: middle;
+	max-width: 500px;
+	table-layout: fixed;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+}
+
+/* For the table cells  */
+.weatherCard table td {
+	max-width: 80px;
+	background-color: #ADD9D9;
+}
+
+/* For the card styling */
+.weatherCard {
+	border: none;
+}
+
+/* For weather entry box reqs  */
+.colorSet {
+	font-size: 20px;
+}
+
+/* For the table headers of the card  */
+.weatherCard table th {
+        background-color: #ADD9D9;
+}
+
+/* Attributes for table vals  */
+.vals {
+	font-size: 14px;
+}
+
+/* Attributes for table headers  */
+.headers {
+	font-size: 14px;
+	text-align: left;
+}
+
+/* Attributes for table titles */
+.titles {
+	text-decoration: underline solid black 3px;
+	font-size: 16px;
+}
+
+/*---------------------*/
+
+/*History Page Styling*/
+
+/*---------------------*/
+
+/* Attributes for history card  */
+.historyCard {         
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 14px;
+        text-align: center;
+	background-color: #ADD9D9;
+	border: none;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+}
+
+/* Attributes for history card info about weather */
+#wthr {
+	 display:inline-flex;
+}
+
+/* Attributes for the 2 tables in history page */
+#histTable td {
+	font-size: 12px;
+}
+
+/* For one of the tables in history page's cells */
+#wthrHist td {
+	min-width: 400px;
+}
+
+/* For one of the tables in history page */
+#wthrHist {
+	background-color: #ADD9D9;
+}
+
+/* For the other table in history page's */
+.headerHist {
+	font-size: 14px;
+}
+
+/* For the second card on the history page */
+.weatherHistBody {
+        margin-bottom: 50px;
+        background-color: transparent;
+	border-style: none;
+}

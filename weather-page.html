@@ -1,0 +1,191 @@
+<!--
+Name: Vimal Vinod
+Course: CSE383
+Section: A
+Professor: Kurt Johnson
+Assignment: Final Project
+Page: Weather Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <!-- Required meta tags -->
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <!-- Bootstrap CSS -->
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+                <!-- jQuery -->
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                <!-- CSS and JavaScript -->
+                <link href="final.css?rev=21" rel="stylesheet" type="text/css">
+                <script src="final.js?rev=11"></script>
+                <title>Weather - Weather Page</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/092oSoP.png/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/092oSoP.png/favicon-16x16.png">
+        </head>
+        <body>
+                <div id="center" class="container-fluid">
+                        <nav class="navbar navbar-expand-lg navbar-light shadow-5-strong navCust">
+                                <h3 class="navbar-brand custTitle">Weather Application</h3>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                        <ul class="navbar-nav mr-auto">
+                                                <li class="nav-item">
+                                                        <a class="nav-link bttn" href="index.html">Home</a>
+                                                </li>
+                                                <li class="nav-item active">
+                                                        <a class="nav-link bttn" href="weather-page.html">Weather</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a class="nav-link bttn" href="history-page.html">History</a>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </nav>       
+			<div class="card locationCard mx-auto align-self-center d-flex justify-content-around">
+                                <div class="card-body">
+					<div class="card-text">
+						<div class="row">
+                                                	<h6 class="center colorSet">Location:</h6>
+                                                </div>
+						<br>
+						<div class="row">	
+							<div class="col-sm">	
+                                				<textarea id="locationBox" class="center" rows="3" cols="35" placeholder="ex. Benton Hall Oxford Ohio" required></textarea>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm d-flex justify-content-around">
+								<input type="button" id="submitLoc" class="btn btn-outline-danger" value="Submit" onclick="getcoords(document.getElementById('locationBox').value);">        
+							</div>
+						</div>
+					</div>
+                                </div>
+                        </div>	
+			<br>
+			<div class="card weather">
+				<div class="card-body">
+                                        <div class="card-text">
+                                                <div class="row">
+                                                        <h6 class="center colorSet">Weather Forecast:</h6>
+                                        	</div>
+                                                <br>
+						<div class="row row-cols-lg-5 allFiveDay">
+							<div class="col-sm day1 d-flex justify-content-around">
+								<div class="card weatherCard">
+									<img src="" alt="" id="day0img" class="card-img-top">
+                                					<div class="card-body">
+                                        					<div class="card-text">
+											<table class="table table-primary table-responsive">
+												<thead class="titles"><tr><th>Weather</th><th>Value</th></tr></thead>
+												<tbody>
+													<tr><td class="headers">Date</td><td id='date0' class="vals">&nbsp;</td></tr>
+													<tr><td class="headers">Day</td><td id='day0' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">High (F)</td><td id='high0' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Low (F)</td><td id='low0' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Forecast</td><td id='forecastDes0' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Visibility (mi)</td><td id='vsblty0' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Humidity (%)</td><td id='humdty0' class="vals">&nbsp;</td></tr>
+												</tbody>
+											</table>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm day2 d-flex justify-content-around">
+								<div class="card weatherCard">
+                                                                        <img src="" alt="" id="day8img" class="card-img-top">
+                                                                        <div class="card-body">
+                                                                                <div class="card-text">
+	                                                                                <table class="table table-primary table-responsive">
+                                                                                                <thead class="titles"><tr><th>Weather</th><th>Value</th></tr></thead>
+                                                                                                <tbody>
+                                                                                                        <tr><td class="headers">Date</td><td id='date8' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Day</td><td id='day8' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">High (F)</td><td id='high8' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Low (F)</td><td id='low8' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Forecast</td><td id='forecastDes8' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Visibility (mi)</td><td id='vsblty8' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Humidity (%)</td><td id='humdty8' class="vals">&nbsp;</td></tr>
+                                                                                                </tbody>
+                                                                                        </table>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+							<div class="col-sm day3 d-flex justify-content-around">
+								<div class="card weatherCard">
+                                                                        <img src="" alt="" id="day16img" class="card-img-top">
+                                                                        <div class="card-body">
+                                                                                <div class="card-text">
+                                                                                        <table class="table table-primary table-responsive">
+                                                                                                <thead class="titles"><tr><th>Weather</th><th>Value</th></tr></thead>
+                                                                                                <tbody>
+                                                                                                        <tr><td class="headers">Date</td><td id='date16' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Day</td><td id='day16' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">High (F)</td><td id='high16' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Low (F)</td><td id='low16' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Forecast</td><td id='forecastDes16' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Visibility (mi)</td><td id='vsblty16' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Humidity (%)</td><td id='humdty16' class="vals">&nbsp;</td></tr>
+                                                                                                </tbody>
+                                                                                        </table>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+							<div class="col-sm day4 d-flex justify-content-around">
+								<div class="card weatherCard">
+                                                                        <img src="" alt="" id="day24img" class="card-img-top">
+                                                                        <div class="card-body">
+                                                                                <div class="card-text">
+                                                                                        <table class="table table-primary table-responsive">
+                                                                                                <thead class="titles"><tr><th>Weather</th><th>Value</th></tr></thead>
+                                                                                                <tbody>
+                                                                                                        <tr><td class="headers">Date</td><td id='date24' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Day</td><td id='day24' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">High (F)</td><td id='high24' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Low (F)</td><td id='low24' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Forecast</td><td id='forecastDes24' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Visibility (mi)</td><td id='vsblty24' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Humidity (%)</td><td id='humdty24' class="vals">&nbsp;</td></tr>
+                                                                                                </tbody>
+                                                                                        </table>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+							<div class="col-sm day5 d-flex justify-content-around">
+								<div class="card weatherCard">
+                                                                        <img src="" alt="" id="day32img"  class="card-img-top">
+                                                                        <div class="card-body">
+                                                                                <div class="card-text">
+                                                                                        <table class="table table-primary table-responsive">
+                                                                                                <thead class="titles"><tr><th>Weather</th><th>Value</th></tr></thead>
+                                                                                                <tbody>
+                                                                                                        <tr><td class="headers">Date</td><td id='date32' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Day</td><td id='day32' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">High (F)</td><td id='high32' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Low (F)</td><td id='low32' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Forecast</td><td id='forecastDes32' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Visibility (mi)</td><td id='vsblty32' class="vals">&nbsp;</td></tr>
+                                                                                                        <tr><td class="headers">Humidity (%)</td><td id='humdty32' class="vals">&nbsp;</td></tr>
+                                                                                                </tbody>
+                                                                                        </table>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>	
+						</div>
+					</div>
+                                </div>	
+			</div>		
+                </div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        </body>
+</html>
